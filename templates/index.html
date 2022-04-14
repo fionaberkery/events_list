@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {{ title }} - Events </title>
+</head>
+<body>
+    <header>
+        <h1> Our Events </h1> 
+    </header>
+
+    <form action="/addevents" method="post">
+        <label for="date">Event Date</label>
+        <input type="text" name="date" id="date">
+        <label for="title">Event Name</label>
+        <input type="text" name="title" id="title">
+        <label for="guests">Number of Guests</label>
+        <input type="text" name="guests" id="guests">
+        <label for="room">Room Location</label>
+        <input type="text" name="room" id="room">
+        <label for="description">Event Description</label>
+        <textarea name="description" rows="2" cols="20"></textarea>
+        <input type="submit" value="Add Event">
+      </form>
+
+    {% for event in events %}
+        <div>
+            <p>
+                <b>{{ event.name }}</b> : {{ event.date}} {{ event.no_of_guests }}, {{ event.room_location }}, {{ event.description }}
+            </p>
+        </div>
+    {% endfor %}
+</body>
+</html>

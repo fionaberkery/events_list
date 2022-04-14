@@ -1,0 +1,7 @@
+class Event():
+    def __init__(self, date, name, no_of_guests, room_location, description):
+        self.date = date
+        self.name = name
+        self.no__of_guests = no_of_guests
+        self.room_location = room_location
+        self.description = description
