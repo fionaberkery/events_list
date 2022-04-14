@@ -17,5 +17,5 @@ def events_page():
     event_description = request.form["description"]
     new_event = Event(event_date, event_name, event_no_of_guests, event_room_location, event_description) 
     add_new_event(new_event) 
-    return render_template('index.html', title='Home, tasks=tasks')
+    return render_template('index.html', title='Home', events=events)
     
