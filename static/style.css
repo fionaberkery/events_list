@@ -1,8 +1,9 @@
 body > header {
-    background-color: aquamarine;
+    background-color: rgb(176, 80, 180);
     size : 100px;
     text-align: center;
     padding : 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 body > section > header {
@@ -23,3 +24,7 @@ form {
     padding : 8px 20px;
 }
 
+div {
+    border-radius: 5px;
+    border-color: black;
+}
