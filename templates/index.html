@@ -28,7 +28,12 @@
     {% for event in events %}
         <div>
             <p>
-                <b>{{ event.name }}</b> : {{ event.date}} {{ event.no_of_guests }}, {{ event.room_location }}, {{ event.description }}
+                <b>{{ event.name }}</b> : 
+                {{ event.date}} {{ event.no_of_guests }}, {{ event.room_location }}, {{ event.description}}
+
+                {% if event.recurring %}
+                <span> - this is a recurring event </span>
+                {% endif %}
             </p>
         </div>
     {% endfor %}
