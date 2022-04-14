@@ -4,34 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title> {{ title }} - Events </title>
 </head>
 <body>
     <header>
         <h1> Our Events </h1> 
     </header>
-
+    <section>
+        <header>
+            <h2> Add your event here!</h2>
+        </header>
     <form action="/addevents" method="post">
-        <label for="date">Event Date</label>
+        <b><label for="date">Event Date</label></b>
         <input type="date" name="date" id="date">
-        <label for="title">Event Name</label>
+        <b><label for="title">Event Name</label></b>
         <input type="text" name="title" id="title">
-        <label for="guests">Number of Guests</label>
+        <b><label for="guests">Number of Guests</label></b>
         <input type="text" name="guests" id="guests">
-        <label for="room">Room Location</label>
+        <b><label for="room">Room Location</label></b>
         <input type="text" name="room" id="room">
-        <label for="description">Event Description</label>
-        <textarea name="description" rows="2" cols="20"></textarea>
         <p>
-            Is this event recurring?
-        </p>
+        <b><label for="description">Event Description</label></b>
+        <textarea name="description" rows="2" cols="20"></textarea>
+        
+            <b>Is this event recurring?</b>
+        
         
         <input type="checkbox" name="recurring" id="recurring" value="yes">
         <label for="recurring" > Yes </label>
         <input type="checkbox" name="recurring" id="recurring" value="no">
         <label for="recurring" > No </label>
         <p>
-        <input type="submit" value="Add Event">
+        <input type="submit" value="Add Event" id="submit_button">
         </p>
     </form>
 

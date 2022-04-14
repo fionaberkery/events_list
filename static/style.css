@@ -1,0 +1,25 @@
+body > header {
+    background-color: aquamarine;
+    size : 100px;
+    text-align: center;
+    padding : 10px;
+}
+
+body > section > header {
+    color :rgb(255, 0, 162);
+
+}
+
+form {
+    display : flex
+    flex-direction : column;
+
+}
+
+#submit_button {
+    background-color: rgb(255, 0, 162);
+    cursor : pointer;
+    color : white;
+    padding : 8px 20px;
+}
+
